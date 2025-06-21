@@ -1,0 +1,6 @@
+﻿/Auth.API/bin/Debug/net8.0
+/Auth.API/.vs
+/Auth.Client/.vscode
+/Auth.API/obj
+/Auth.API/appsettings.json
+/Auth.API/appsettings.Development.json

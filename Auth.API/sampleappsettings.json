@@ -1,0 +1,19 @@
+{
+  //rename file to "appsettings.json"
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "ConnectionStrings": {
+    "authCon": "your-connection-string"
+  },
+  "JwtSettings": {
+    "SecretKey": "your-secret-key",
+    "Issuer": "AuthApi.com",
+    "Audience": "AuthApi.com",
+    "ExpiryInMinutes": 60
+  },
+  "AllowedHosts": "*"
+}

@@ -1,0 +1,26 @@
+<div class="row">
+  <div class="col-6">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Sr</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Mobile</th>
+          <th>Role</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (user of userList; track $index) {
+        <tr>
+          <td>{{ $index + 1 }}</td>
+          <td>{{ user.fullName }}</td>
+          <td>{{ user.emailId }}</td>
+          <td>{{ user.mobileNo }}</td>
+          <td>{{ user.role }}</td>
+        </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+</div>

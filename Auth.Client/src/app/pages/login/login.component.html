@@ -1,0 +1,105 @@
+<div class="parent">
+  <div class="signup-container">
+    @if (toggleForm) {
+    <form id="signup-form" class="signup-form">
+      <h2>Create an Account</h2>
+
+      <div class="input-group">
+        <label for="username">Full Name</label>
+        <input
+          type="text"
+          id="username"
+          [(ngModel)]="registerObj.fullName"
+          name="fullName"
+          placeholder="Enter your FullName"
+          required
+        />
+        <small id="username-error" class="error-message"></small>
+      </div>
+
+      <div class="input-group">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          [(ngModel)]="registerObj.emailId"
+          name="emailId"
+          placeholder="Enter your Email"
+          required
+        />
+        <small id="email-error" class="error-message"></small>
+      </div>
+
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          [(ngModel)]="registerObj.password"
+          name="password"
+          placeholder="Enter your Password"
+          required
+        />
+        <small id="password-error" class="error-message"></small>
+      </div>
+
+      <div class="input-group">
+        <label for="confirm-password">Mobile No</label>
+        <input
+          type="password"
+          id="confirm-password"
+          [(ngModel)]="registerObj.mobileNo"
+          name="mobileNo"
+          placeholder="Mobile No"
+          required
+        />
+        <small id="confirm-password-error" class="error-message"></small>
+      </div>
+
+      <button type="button" (click)="onRegister()" class="submit-btn">
+        Sign Up
+      </button>
+
+      <div class="login-link">
+        <p (click)="toggle()">Already have an account? <a>Login here</a></p>
+      </div>
+    </form>
+    }@else {
+    <form id="signup-form" class="signup-form">
+      <h2>Login</h2>
+
+      <div class="input-group">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          [(ngModel)]="loginObj.emailId"
+          name="emailId"
+          placeholder="Enter your email"
+          required
+        />
+        <small id="email-error" class="error-message"></small>
+      </div>
+
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          [(ngModel)]="loginObj.password"
+          name="password"
+          placeholder="Enter your password"
+          required
+        />
+        <small id="password-error" class="error-message"></small>
+      </div>
+
+      <button type="button" (click)="onLogin()" class="submit-btn">Login</button>
+
+      <div class="login-link">
+        <p (click)="toggle()">If you are new here? <a>Sign Up</a></p>
+      </div>
+    </form>
+    }
+  </div>
+</div>
